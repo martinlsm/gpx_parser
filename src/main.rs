@@ -6,7 +6,7 @@ use gpx::Gpx;
 
 mod plotting;
 
-const OUT_FILE_NAME: &'static str = "plotters-doc-data/sample.png";
+const OUT_FILE_NAME: &'static str = "plotters-doc-data/sample2.png";
 
 fn main() {
     // This XML file actually exists — try it for yourself!
@@ -14,7 +14,7 @@ fn main() {
     let reader = BufReader::new(file);
 
     // read takes any io::Read and gives a Result<Gpx, Error>.
-    let gpx: Gpx = read(reader).unwrap();
+    let mut gpx: Gpx = read(reader).unwrap();
 
-    plotting::create_plot(&gpx, OUT_FILE_NAME).unwrap();
+    plotting::create_plot(&mut gpx, OUT_FILE_NAME).unwrap();
 }
