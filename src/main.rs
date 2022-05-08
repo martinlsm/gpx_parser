@@ -6,11 +6,11 @@ use gpx::Gpx;
 
 mod plotting;
 
-const OUT_FILE_NAME: &'static str = "plotters-doc-data/sample2.png";
+const OUT_FILE_NAME: &'static str = "plotters-doc-data/lundaloppet.png";
 
 fn main() {
     // This XML file actually exists — try it for yourself!
-    let file = File::open("test.GPX").unwrap();
+    let file = File::open("lundaloppet-2022-babel.gpx").unwrap();
     let reader = BufReader::new(file);
 
     // read takes any io::Read and gives a Result<Gpx, Error>.
