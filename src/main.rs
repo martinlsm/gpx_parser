@@ -4,6 +4,7 @@ use std::io::BufReader;
 use gpx::read;
 use gpx::Gpx;
 
+mod error;
 mod plotting;
 
 const OUT_FILE_NAME: &'static str = "plotters-doc-data/lundaloppet.png";
